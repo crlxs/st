@@ -1,0 +1,6 @@
+# Generated build output and local configuration
+*.o
+/config.h
+/config.h.*
+/*.tar.gz
+/st

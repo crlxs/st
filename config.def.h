@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrainsMono Nerd Font:pixelsize=16:antialias=true:autohint=true";
-static int borderpx = 2;
+static char *font = "Noto Sans Mono:pixelsize=16:antialias=true";
+static int borderpx = 6;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -101,33 +101,17 @@ float alpha_def;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
-
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
-
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"gray90", /* default foreground colour */
-	"black", /* default background colour */
+    /* Normal ANSI colors */
+    "#0d0c0c", "#c4746e", "#8a9a7b", "#c4b28a",
+    "#8ba4b0", "#a292a3", "#8ea4a2", "#c5c9c5",
+    /* Bright ANSI colors */
+    "#625e5a", "#e46876", "#a3b395", "#d9c49c",
+    "#a5beca", "#bca7bd", "#a8bdb9", "#e6e8e6",
+    [255] = 0,
+    "#c8c093", /* 256: cursor */
+    "#181616", /* 257: reverse cursor */
+    "#c5c9c5", /* 258: foreground */
+    "#181616", /* 259: background */
 };
 
 
@@ -153,7 +137,7 @@ static unsigned int defaultrcs = 257;
  * 7: blinking st cursor
  * 8: steady st cursor
  */
-static unsigned int cursorstyle = 1;
+static unsigned int cursorstyle = 2;
 static Rune stcursor = 0x2603; /* snowman ("☃") */
 
 /*
