@@ -21,11 +21,12 @@ picom, the jaguar wallpaper, and the other desktop tools. On Debian 12 or newer
 
     sudo apt update
     sudo apt install -y ansible-core git ca-certificates
-    git clone https://github.com/crlxs/rice.git ~/rice
-    cd ~/rice
+    mkdir -p ~/.local/src ~/.local/share
+    git clone https://github.com/crlxs/rice.git ~/.local/src/rice
+    cd ~/.local/src/rice
     ansible-playbook -i localhost, setup.yaml --ask-become-pass
 
-Skip the clone if ~/rice exists. Run the playbook without sudo; it requests
+Skip the clone if ~/.local/src/rice exists. Run the playbook without sudo; it requests
 sudo for system packages. For just the desktop, add --tags suckless.
 After logging out and back in, run startx from a local text console. Without
 the login environment, use startx "$HOME/.config/x11/xinitrc".
