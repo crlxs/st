@@ -54,7 +54,7 @@ Uses Noto Sans Mono and a muted Kanagawa Dragon palette. On Debian install
 fonts-noto-mono and fonts-noto-color-emoji. The rice installer also installs
 Symbols Nerd Font Mono for Neovim icons and configures font fallbacks.
 
-Text is 16 pixels with 6 pixels of internal padding and a steady cursor.
+Text is 14 pixels with 6 pixels of internal padding and a steady cursor.
 The default alpha stays at 1; dwm controls whole-window transparency.
 
 Requirements

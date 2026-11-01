@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Noto Sans Mono:pixelsize=16:antialias=true";
+static char *font = "Noto Sans Mono:pixelsize=14:antialias=true";
 static int borderpx = 6;
 
 /*
